@@ -2,6 +2,8 @@
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the
 # even-valued terms.
 
+
+
 def main():
     # prev_digit will be the variable denoting the previous number in the sequence, n-1
     # curr_digit will be the variable denoting the current number in the sequence, n
@@ -21,7 +23,6 @@ def main():
         if prev_digit % 2 is 0:
             even_fibs_sum += prev_digit
     print(even_fibs_sum)
-
 
 if __name__ == "__main__":
     main()
