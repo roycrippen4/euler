@@ -11,9 +11,10 @@ def generate_primes(n: int):
 
 
 # takes a positive integer of any length and returns true if the given number is a palindrome.
-def is_palindrome(word):
-    rev_word = word[::-1]
-    return word == rev_word
+def is_palindrome(palindrome):
+    palindrome = str(palindrome)
+    rev_word = palindrome[::-1]
+    return palindrome == rev_word
 
 
 # this function takes an integer and returns if the number is prime, the function returns true, otherwise, the function
@@ -31,3 +32,11 @@ def is_prime(n: int):
         return True
     else:
         return False
+
+
+def find_divisors(n: int):
+    divisors = []
+    for num in range(2, round(n / 2)):
+        if n % num == 0:
+            divisors.append(num)
+    return divisors
