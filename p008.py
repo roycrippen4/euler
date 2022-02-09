@@ -3,7 +3,8 @@ from utilities import get_digit_list
 
 
 def main():
-    get_digit_list()
+    digit_list = get_digit_list()
+
 
 
 if __name__ == "__main__":
