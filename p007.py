@@ -5,14 +5,13 @@ from sympy import isprime
 
 
 def main():
-    count = 1
-    num = 1
-    while count < 10001:
-        if isprime(num):
-            count += 1
-        num += 1
-    print(num)
-    exit()
+    number_of_primes = 1
+    potential_prime = 1
+    while number_of_primes < 10002:
+        if isprime(potential_prime):
+            number_of_primes += 1
+        potential_prime += 1
+    print(potential_prime - 1)
 
 
 if __name__ == "__main__":
