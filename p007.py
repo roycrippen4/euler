@@ -6,13 +6,14 @@ from sympy import isprime
 
 def main():
     number_of_primes = 1
-    potential_prime = 1
-    while number_of_primes < 10002:
+    potential_prime = 3
+    while number_of_primes < 10001:
         if isprime(potential_prime):
             number_of_primes += 1
-        potential_prime += 1
-    print(potential_prime - 1)
+        potential_prime += 2
+    print(potential_prime - 2)
 
+    # ans is 104_743
 
 if __name__ == "__main__":
     main()
