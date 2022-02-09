@@ -1,7 +1,9 @@
 # p008
+from utilities import get_digit_list
+
 
 def main():
-    print("hello")
+    get_digit_list()
 
 
 if __name__ == "__main__":
