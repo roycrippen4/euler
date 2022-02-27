@@ -1,5 +1,8 @@
 # p008
+#
 from utilities import get_digit_list
+# The four adjacent digits in the 1000-digit number that have the greatest product are 9 × 9 × 8 × 9 = 5832. Find the
+# thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
 
 
 def main():
@@ -16,7 +19,8 @@ def main():
         if maximum_product < current_product:
             maximum_product = current_product
         current_product = 1
-    print("this is the answer: ", maximum_product)
+    print("The greatest product that can be constructed from 13 adjacent digits within the given number is:"
+          "", maximum_product)
 
 
 if __name__ == "__main__":
