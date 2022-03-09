@@ -1,3 +1,6 @@
+from math import sqrt
+
+
 def generate_primes(n: int):
     primes = []
     for num in range(0, n + 1):
@@ -69,3 +72,14 @@ def get_digit_list():
     for line in big_number:
         digits.extend([int(char) for char in line])
     return digits
+
+
+def is_triplet(a: int, b: int):
+    return a < b and sqrt(a * a + b * b) % 1 == 0
+
+
+def build_number_array(n):
+    num_list = []
+    for i in range(0, n):
+        num_list.append(i)
+    return num_list
