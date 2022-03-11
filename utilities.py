@@ -69,9 +69,26 @@ def get_digit_list():
         '05886116467109405077541002256983155200055935729725',
         '71636269561882670428252483600823257530420752963450',
     ]
-    for line in big_number:
-        digits.extend([int(char) for char in line])
-    return digits
+    # for line in big_number:
+    #    digits.extendc
+    # return digits
+
+
+def build_p011_grid():
+    grid = []
+    with open('/Users/roycrippen/dev/python/euler/supplementary_files/p011_grid') as file:
+        for line in file:
+            split_line = [int(i) for i in line.split()]
+            grid.append(split_line)
+    return grid
+
+
+def p011_check_south(y):
+    return y + 3 < 19
+
+
+def p011_get_east(x):
+    return x + 3 < 19
 
 
 def is_triplet(a: int, b: int):
