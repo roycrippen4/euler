@@ -38,10 +38,11 @@ def is_prime(n: int):
 
 
 def find_divisors(n: int):
-    divisors = []
-    for num in range(2, round(n / 2)):
+    divisors = [1]
+    for num in range(2, n):
         if n % num == 0:
             divisors.append(num)
+    divisors.append(n)
     return divisors
 
 
