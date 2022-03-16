@@ -1,4 +1,4 @@
-from math import sqrt
+from math import sqrt, ceil
 
 
 def generate_primes(n: int):
@@ -37,12 +37,20 @@ def is_prime(n: int):
         return False
 
 
-def find_divisors(n: int):
+def get_divisors(n: int):
     divisors = [1]
     for num in range(2, n):
         if n % num == 0:
             divisors.append(num)
     divisors.append(n)
+    return divisors
+
+
+def how_many_divisors(n: int):
+    divisors = 2
+    for num in range(2, ceil(sqrt(n))):
+        if n % num == 0:
+            divisors += 2
     return divisors
 
 
