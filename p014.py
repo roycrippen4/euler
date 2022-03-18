@@ -4,7 +4,7 @@ def main():
     cache = {}
     for i in range(2, 1_000_000):
         get_len_collatz(i, cache)
-    print(max(zip(cache.values(), cache.keys()))[1])
+    print(max(zip(cache.values(), cache.keys()))[1])  # ans = 837799
 
 
 def get_len_collatz(i: int, cache):
