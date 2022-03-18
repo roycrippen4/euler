@@ -86,19 +86,3 @@ def get_digit_list():
 def is_triplet(a: int, b: int):
     return a < b and sqrt(a * a + b * b) % 1 == 0
 
-
-def get_len_collatz(initial_value: int, cache):
-    count = 1
-    n = initial_value
-    while n != 1:
-        if n in cache:
-            cache[initial_value] = cache[n] + count
-            break
-        if n % 2 == 0:
-            n = int(n / 2)
-        else:
-            n = 3 * n + 1
-        count += 1
-    cache[initial_value] = count
-    return cache
-
