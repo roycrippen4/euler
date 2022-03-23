@@ -7,7 +7,7 @@ def main():
     number = str(2 ** 1000)
     summation = 0
     for digit in number:
-        summation = int(digit) + summation
+        summation += int(digit)
     print(summation)
 
 
