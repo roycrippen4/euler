@@ -1,4 +1,4 @@
-from math import sqrt, ceil
+from math import sqrt, ceil, factorial
 
 
 def generate_primes(n: int):
@@ -86,3 +86,6 @@ def get_digit_list():
 def is_triplet(a: int, b: int):
     return a < b and sqrt(a * a + b * b) % 1 == 0
 
+
+def combination(n, r):
+    return factorial(n) / (factorial(r) * (factorial(n - r)))
