@@ -9,6 +9,7 @@ def main():
     for digit in number_string:
         summation += int(digit)
     print(summation)  # 1366
+    print(sum([int(digit) for digit in str(2 ** 1000)]))  # 1366
 
 
 if __name__ == "__main__":
