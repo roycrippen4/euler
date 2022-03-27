@@ -46,6 +46,14 @@ def get_divisors(n: int):
     return divisors
 
 
+def get_proper_divisors(n: int):
+    divisors = []
+    for num in range(1, n):
+        if n % num == 0:
+            divisors.append(num)
+    return divisors
+
+
 def how_many_divisors(n: int):
     divisors = 2
     for num in range(2, ceil(sqrt(n))):
