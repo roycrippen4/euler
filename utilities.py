@@ -89,3 +89,11 @@ def is_triplet(a: int, b: int):
 
 def combination(n, r):
     return factorial(n) / (factorial(r) * (factorial(n - r)))
+
+
+def list_digits_of_n(n: int):
+    n = str(n)
+    digit_list = []
+    for i in range(0, len(n)):
+        digit_list.append(int(n[i]))
+    return digit_list
