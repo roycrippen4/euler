@@ -56,7 +56,7 @@ def main():
             days['Feb'] = 28
         for month in range(1, 13):
             for day in range(1, days[months.get(month)] + 1):
-                print(months[month], day, year, day_of_week[day_of_week_idx])
+                # print(months[month], day, year, day_of_week[day_of_week_idx])
                 if day == 1 and day_of_week_idx == 6:
                     answer += 1
                 if day_of_week_idx < 6:
