@@ -11,7 +11,7 @@ def main():
 
 
 def p013_get_sum():
-    with open('/Users/roycrippen/dev/python/euler/supplementary_files/p013_digits.txt') as file:
+    with open('/supplementary_files/p013_digits.txt') as file:
         big_num = 0
         for line in file:
             split_line = [int(i) for i in line.split()]

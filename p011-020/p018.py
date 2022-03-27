@@ -22,7 +22,7 @@ def main():
 
 def p018_data_prep():
     data = []
-    with open('/Users/roycrippen/dev/python/euler/supplementary_files/p018.txt') as file:
+    with open('/supplementary_files/p018.txt') as file:
         for line in file:
             data.append([int(i) for i in line.split()])
     return data
