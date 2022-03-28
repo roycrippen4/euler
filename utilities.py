@@ -48,7 +48,7 @@ def get_divisors(n: int):
 
 def get_proper_divisors(n: int):
     divisors = []
-    for num in range(1, n):
+    for num in range(1, 1 + int(n / 2)):
         if n % num == 0:
             divisors.append(num)
     return divisors

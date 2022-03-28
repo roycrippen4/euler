@@ -8,25 +8,28 @@
 #
 # Evaluate the sum of all the amicable numbers under 10000.
 
-from utilities import get_proper_divisors
-
 
 def main():
-    cache = {}
-    for i in range(1, 1001):
-        update_cache(i, cache)
-    print(cache)
+    answer = 0
+    for i in range(9999, 218, -1):
+        if is_amicable(i):
+            answer += i
+            print(i)
+    print(answer)  # 31626
 
 
-def update_cache(n, cache):
-    divisors = []
-    for num in range(1, n):
-        if num != 1 and num in cache:
-            cache[n] =
-        elif n % num == 0 and n != num:
-            divisors.append(num)
-    cache[n] = divisors
-    return cache
+def sum_proper_divisors(n: int):
+    sum_divisors = 0
+    for num in range(1, 1 + int(n / 2)):
+        if n % num == 0:
+            sum_divisors += num
+    return sum_divisors
+
+
+def is_amicable(a):
+    b = sum_proper_divisors(a)
+    if b != a and a == sum_proper_divisors(b):
+        return True
 
 
 if __name__ == "__main__":
