@@ -10,12 +10,13 @@
 
 
 def main():
-    answer = 0
-    for i in range(9999, 218, -1):
-        if is_amicable(i):
-            answer += i
-            print(i)
-    print(answer)  # 31626
+    sum_divisors_table = {i: sum_proper_divisors(i) for i in range(2, 10002, 2) if i % 3 != 0}
+    total = 0
+    for number in sum_divisors_table:
+        maybe_idx = sum_divisors_table[number]
+        if maybe_idx in sum_divisors_table and number != maybe_idx and sum_divisors_table[maybe_idx] == number:
+            total += number
+    print(total)  # 31626
 
 
 def sum_proper_divisors(n: int):
@@ -24,12 +25,6 @@ def sum_proper_divisors(n: int):
         if n % num == 0:
             sum_divisors += num
     return sum_divisors
-
-
-def is_amicable(a):
-    b = sum_proper_divisors(a)
-    if b != a and a == sum_proper_divisors(b):
-        return True
 
 
 if __name__ == "__main__":
