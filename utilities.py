@@ -54,6 +54,16 @@ def get_proper_divisors(n: int):
     return divisors
 
 
+def divisor_sum_list(limit):
+    xs = [0] * limit
+    for i in range(1, int(limit / 2) + 1):
+        j = 2 * i
+        while j < limit:
+            xs[j] += i
+            j += i
+    return xs
+
+
 def how_many_divisors(n: int):
     divisors = 2
     for num in range(2, ceil(sqrt(n))):
