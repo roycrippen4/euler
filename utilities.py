@@ -105,8 +105,8 @@ def is_triplet(a: int, b: int):
     return a < b and sqrt(a * a + b * b) % 1 == 0
 
 
-def combination(n, r):
-    return factorial(n) / (factorial(r) * (factorial(n - r)))
+def combinations(n, r):
+    return int(factorial(n) / (factorial(r) * (factorial(n - r))))
 
 
 def list_digits_of_n(n: int):
