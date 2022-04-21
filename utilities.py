@@ -20,6 +20,18 @@ def is_palindrome(palindrome):
     return palindrome == rev_word
 
 
+# takes any string and returns true if the given input is a palindrome, solved recursively
+def recursive_is_palindrome(x: str):
+    if len(x) == 1:
+        return True
+    if len(x) == 2 and x[0] == x[1]:
+        return True
+    elif len(x) == 2 and x[0] != x[1]:
+        return False
+    else:
+        return recursive_is_palindrome(x[1:-1])
+
+
 # this function takes an integer and returns if the number is prime, the function returns true, otherwise, the function
 # returns false.
 def is_prime(n: int):
