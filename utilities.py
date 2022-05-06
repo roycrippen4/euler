@@ -22,12 +22,13 @@ def is_palindrome(palindrome):
 
 # takes any string and returns true if the given input is a palindrome, solved recursively
 def recursive_is_palindrome(string: str):
-    if len(string) == 1:
+    if len(string) == 1 or len(string) == 0:
         return True
-    elif len(string) >= 2:
-        return string[0] == string[-1]
     else:
-        return recursive_is_palindrome(string[1:-1])
+        if string[0] != string[-1]:
+            return False
+        else:
+            return recursive_is_palindrome(string[1:-1])
 
 
 # this function takes an integer and returns if the number is prime, the function returns true, otherwise, the function
