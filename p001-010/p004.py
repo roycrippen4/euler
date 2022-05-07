@@ -16,6 +16,7 @@
 # 13  13  169
 from utilities import is_palindrome
 
+
 def main():
     lower = 100
     upper = 1000
@@ -27,6 +28,7 @@ def main():
         lower += 1
     palindromes.sort()
     print(palindromes.pop())
+
 
 def p004():
     big_palindrome = 0

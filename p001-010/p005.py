@@ -3,23 +3,20 @@
 from math import factorial as fact
 
 
-
 def main():
-
-    def is_divisible(num):
-        for i in range(2, 21):
-            if num % i != 0:
-                return False
-        return True
-
-
     num = 2520
-
     while True:
         if is_divisible(num):
             break
         num += 2520
     print(num)
+
+
+def is_divisible(num):
+    for i in range(2, 21):
+        if num % i != 0:
+            return False
+    return True
 
 
 if __name__ == "__main__":

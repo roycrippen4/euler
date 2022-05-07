@@ -5,7 +5,7 @@
 #
 # There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 # Find the product abc.
-from utilities import is_triplet, generate_primes
+from utilities import is_triplet
 from math import sqrt
 
 

@@ -7,8 +7,6 @@ from sympy import isprime
 def main():
     summation = 2 + 3 + 5
     for i in range(7, 2_000_000, 2):
-        # if i % 3 == 0 or i % 5 == 0:
-        #     continue
         if isprime(i):
             summation += i
     print(summation)

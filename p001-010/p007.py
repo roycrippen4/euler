@@ -13,7 +13,8 @@ def main():
         potential_prime += 2
     print(potential_prime - 2)
 
-    # ans is 104_743
+    # answer is 104_743
+
 
 if __name__ == "__main__":
     main()

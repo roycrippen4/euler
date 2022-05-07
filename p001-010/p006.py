@@ -5,13 +5,13 @@
 
 
 def main():
-    squaresum = 0
-    sumsquare = 0
+    square_sum = 0
+    sum_square = 0
 
     for i in range(1, 101):
-        squaresum += i
-        sumsquare += (i ** 2)
-    print((squaresum ** 2) - sumsquare)
+        square_sum += i
+        sum_square += (i ** 2)
+    print((square_sum ** 2) - sum_square)
 
 
 if __name__ == "__main__":
