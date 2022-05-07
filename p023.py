@@ -13,7 +13,7 @@
 
 
 def main():
-    n = 35
+    n = 28123
     divisor_list = divisor_sum_list(n)
     abundant_list = abundant_num_list(divisor_list)
     answer = 0
