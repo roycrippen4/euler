@@ -3,7 +3,7 @@
 
 def p011_get_data():
     grid = []
-    with open('/supplementary_files/p011_grid') as file:
+    with open('/Users/roycrippen/dev/python/euler/supplementary_files/p011_grid') as file:
         for line in file:
             split_line = [int(i) for i in line.split()]
             grid.append(split_line)
