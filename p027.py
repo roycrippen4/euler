@@ -9,11 +9,11 @@ def main():
 
     for a in range(0, len(ab)):
         for b in range(a, len(ab)):
-            c = num_of_consecutive_primes(ab[a], ab[b])
+            c = num_of_consecutive_primes(-ab[a], ab[b])
             if c > max_consecutive_primes:
                 max_consecutive_primes = c
-                x = (ab[a], ab[b], max_consecutive_primes)
-                product = ab[a] * ab[b]
+                x = (-ab[a], ab[b], max_consecutive_primes)
+                product = -ab[a] * ab[b]
     print(x)
     print(product)
     # -59231
@@ -29,9 +29,6 @@ def num_of_consecutive_primes(a: int, b: int):
 def get_possible_ab_values():
     ab_values = list(sieve.primerange(1, 1000))
     ab_values.append(1)
-    for i in range(0, len(ab_values)):
-        ab_values.append(-ab_values[i])
-    ab_values.sort()
     return ab_values
 
 
