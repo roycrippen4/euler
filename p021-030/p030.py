@@ -18,6 +18,7 @@ def main():
     answer = []
     for i in range(2, 200000):
         if is_power_sum_equal(i, 5):
+            print(i)
             answer.append(i)
     print(sum(answer))
 
