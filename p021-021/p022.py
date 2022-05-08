@@ -18,7 +18,7 @@ def get_name_value(name: str, d: dict):
 
 
 def get_list_names():
-    with open('/Users/roycrippen/dev/python/euler/supplementary_files/p022_names.txt') as file:
+    with open('/supplementary_files/p022_names.txt') as file:
         names = file.read()
         split_names = names.split(',')
         strip_names = []

@@ -121,7 +121,7 @@ def combinations(n, r):
     return int(factorial(n) / (factorial(r) * (factorial(n - r))))
 
 
-def list_digits_of_n(n: int):
+def list_digits(n: int):
     n = str(n)
     digit_list = []
     for i in range(0, len(n)):
