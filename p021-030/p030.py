@@ -15,24 +15,19 @@ from utilities import list_digits
 
 
 def main():
-    # answer = []
-    # for i in range(2, 1000):
-    #     digits = list_digits(i)
-    #     if i == power_sum(digits, 4):
-    #         answer.append(i)
-    # print(answer)
-
-    print(is_power_sum_equal([1, 6, 3, 4], 4))
+    answer = []
+    for i in range(2, 200000):
+        if is_power_sum_equal(i, 5):
+            answer.append(i)
+    print(sum(answer))
 
 
-def is_power_sum_equal(digits: list, power: int):
+def is_power_sum_equal(num: int, power: int):
     p_sum = 0
+    digits = list_digits(num)
     for i in range(0, len(digits)):
         p_sum += digits[i] ** power
-    if i == p_sum:
-        return True
-    else:
-        return False
+    return num == p_sum
 
 
 if __name__ == "__main__":
